@@ -62,6 +62,8 @@
     return { ok: true, url, provider: prov, family };
   }
 
+  const currentProps = {};
+
   /** Apply typography overrides to a selected element via attribute + stylesheet. */
   function applyOverrides(selectorHint, props) {
     const sheet = ensureOverrideSheet();
@@ -78,7 +80,8 @@
     if (!el) return { ok: false, error: "No target element" };
 
     el.setAttribute(attr, "1");
-    const decls = Object.entries(props || {})
+    Object.assign(currentProps, props || {});
+    const decls = Object.entries(currentProps)
       .filter(([, v]) => v != null && String(v).length)
       .map(([k, v]) => `${k}: ${v} !important;`)
       .join(" ");
@@ -87,6 +90,7 @@
   }
 
   function clearOverrides() {
+    for (const key of Object.keys(currentProps)) delete currentProps[key];
     const sheet = document.getElementById(STYLE_ID);
     if (sheet) sheet.remove();
     document.querySelectorAll("[data-typecascade-target]").forEach((n) => {
