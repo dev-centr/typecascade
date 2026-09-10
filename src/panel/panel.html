@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TypeCascade</title>
+    <link rel="stylesheet" href="panel.css" />
+  </head>
+  <body>
+    <header class="top">
+      <img class="logo" src="../../assets/icons/typecascade-glyph.svg" alt="" width="28" height="28" />
+      <div>
+        <h1>TypeCascade</h1>
+        <p class="tag">Typography cascade · edit · provider fonts</p>
+      </div>
+    </header>
+
+    <section class="toolbar">
+      <button type="button" id="btn-pick" class="primary">Pick element</button>
+      <button type="button" id="btn-clear" class="ghost">Clear overrides</button>
+    </section>
+
+    <section id="target" class="card muted">
+      <p class="empty">Pick a text-bearing element on the page.</p>
+    </section>
+
+    <section class="card">
+      <h2>Provider font</h2>
+      <div class="row">
+        <label>
+          Provider
+          <select id="provider">
+            <option value="google">Google Fonts</option>
+            <option value="bunny">Bunny Fonts</option>
+          </select>
+        </label>
+        <label class="grow">
+          Family
+          <input id="family" list="font-suggestions" placeholder="e.g. Fraunces" />
+          <datalist id="font-suggestions"></datalist>
+        </label>
+      </div>
+      <div class="row">
+        <label>
+          Weight
+          <input id="weight" type="text" value="400;700" title="Weights to load (semicolon or comma)" />
+        </label>
+        <button type="button" id="btn-inject" class="primary">Inject &amp; apply</button>
+      </div>
+      <p class="hint">Loads the stylesheet into the page, then sets <code>font-family</code> on the selection.</p>
+    </section>
+
+    <section class="card">
+      <h2>Edit winners</h2>
+      <div id="editors" class="editors"></div>
+      <button type="button" id="btn-apply" class="primary">Apply edits</button>
+    </section>
+
+    <section class="card">
+      <h2>Cascade</h2>
+      <p id="cascade-note" class="hint" hidden></p>
+      <div id="cascade" class="cascade"></div>
+    </section>
+
+    <footer class="foot">
+      <span id="status"></span>
+      <a href="https://github.com/dev-centr/typecascade" target="_blank" rel="noreferrer">Help / repo</a>
+    </footer>
+
+    <script src="../shared/messages.js"></script>
+    <script src="fonts-catalog.js"></script>
+    <script src="panel.js"></script>
+  </body>
+</html>

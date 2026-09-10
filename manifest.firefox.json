@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "TypeCascade",
+  "version": "0.1.0",
+  "description": "Pick an element, see typography cascade with overruled rules struck through, edit winners, inject Google or Bunny fonts.",
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "32": "assets/icons/icon-32.png",
+    "48": "assets/icons/icon-48.png",
+    "128": "assets/icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "TypeCascade",
+    "default_icon": "assets/icons/icon-32.png"
+  },
+  "background": {
+    "scripts": ["src/background.js"]
+  },
+  "sidebar_action": {
+    "default_title": "TypeCascade",
+    "default_panel": "src/panel/panel.html",
+    "default_icon": "assets/icons/icon-32.png",
+    "open_at_install": false
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "https://fonts.googleapis.com/*",
+    "https://fonts.gstatic.com/*",
+    "https://fonts.bunny.net/*",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": [
+        "src/shared/messages.js",
+        "src/content/cascade.js",
+        "src/content/fonts.js",
+        "src/content/select.js"
+      ],
+      "css": ["src/content/select.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "typecascade@devcentr.org",
+      "strict_min_version": "128.0"
+    }
+  }
+}

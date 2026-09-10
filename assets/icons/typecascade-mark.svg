@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="TypeCascade">
+  <title>TypeCascade</title>
+  <defs>
+    <linearGradient id="tcmPaper" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="128">
+      <stop offset="0" stop-color="#fafbfd"/>
+      <stop offset="1" stop-color="#eef1f7"/>
+    </linearGradient>
+    <linearGradient id="tcmInk" gradientUnits="userSpaceOnUse" x1="0" y1="21" x2="0" y2="107">
+      <stop offset="0" stop-color="#252c3f"/>
+      <stop offset="1" stop-color="#141926"/>
+    </linearGradient>
+    <linearGradient id="tcmMuted" gradientUnits="userSpaceOnUse" x1="0" y1="21" x2="0" y2="107">
+      <stop offset="0" stop-color="#9aa2b5"/>
+      <stop offset="1" stop-color="#7e869b"/>
+    </linearGradient>
+    <linearGradient id="tcmAccent" gradientUnits="userSpaceOnUse" x1="0" y1="21" x2="0" y2="107">
+      <stop offset="0" stop-color="#4a83f4"/>
+      <stop offset="1" stop-color="#2560d8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Soft paper tile with a thin rim -->
+  <rect width="128" height="128" rx="28" fill="url(#tcmPaper)"/>
+  <rect x="1" y="1" width="126" height="126" rx="27.5" fill="none" stroke="#d5dbe7" stroke-width="2"/>
+
+  <g transform="translate(4.92 4.93) scale(0.923)">
+    <!-- Type anchor: slab "T" acting as the cascade spine -->
+    <g fill="url(#tcmInk)">
+      <rect x="12" y="18" width="56" height="17" rx="2.5"/>
+      <rect x="30" y="18" width="18" height="92" rx="2.5"/>
+    </g>
+
+    <!-- Overruled declarations: muted rules, struck through from the spine -->
+    <rect x="56" y="44" width="52" height="15" rx="3" fill="url(#tcmMuted)"/>
+    <rect x="46" y="49" width="70" height="5" rx="2.5" fill="url(#tcmInk)"/>
+
+    <rect x="56" y="68" width="38" height="15" rx="3" fill="url(#tcmMuted)"/>
+    <rect x="46" y="73" width="54" height="5" rx="2.5" fill="url(#tcmInk)"/>
+
+    <!-- Winning declaration: accent, un-struck, sitting on the baseline -->
+    <rect x="56" y="93" width="44" height="17" rx="3" fill="url(#tcmAccent)"/>
+  </g>
+</svg>

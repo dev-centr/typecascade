@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="TypeCascade">
+  <title>TypeCascade</title>
+  <defs>
+    <linearGradient id="tcInk" gradientUnits="userSpaceOnUse" x1="0" y1="18" x2="0" y2="110">
+      <stop offset="0" stop-color="#252c3f"/>
+      <stop offset="1" stop-color="#141926"/>
+    </linearGradient>
+    <linearGradient id="tcMuted" gradientUnits="userSpaceOnUse" x1="0" y1="18" x2="0" y2="110">
+      <stop offset="0" stop-color="#9aa2b5"/>
+      <stop offset="1" stop-color="#7e869b"/>
+    </linearGradient>
+    <linearGradient id="tcAccent" gradientUnits="userSpaceOnUse" x1="0" y1="18" x2="0" y2="110">
+      <stop offset="0" stop-color="#4a83f4"/>
+      <stop offset="1" stop-color="#2560d8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Type anchor: slab "T" acting as the cascade spine -->
+  <g fill="url(#tcInk)">
+    <rect x="12" y="18" width="56" height="17" rx="2.5"/>
+    <rect x="30" y="18" width="18" height="92" rx="2.5"/>
+  </g>
+
+  <!-- Overruled declarations: muted rules, struck through from the spine -->
+  <rect x="56" y="44" width="52" height="15" rx="3" fill="url(#tcMuted)"/>
+  <rect x="46" y="49" width="70" height="5" rx="2.5" fill="url(#tcInk)"/>
+
+  <rect x="56" y="68" width="38" height="15" rx="3" fill="url(#tcMuted)"/>
+  <rect x="46" y="73" width="54" height="5" rx="2.5" fill="url(#tcInk)"/>
+
+  <!-- Winning declaration: accent, un-struck, sitting on the baseline -->
+  <rect x="56" y="93" width="44" height="17" rx="3" fill="url(#tcAccent)"/>
+</svg>

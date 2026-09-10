@@ -1,0 +1,15 @@
+html.tc-picking,
+html.tc-picking * {
+  cursor: crosshair !important;
+}
+
+.tc-hover-outline {
+  outline: 2px solid #2f6fed !important;
+  outline-offset: 2px !important;
+}
+
+.tc-selected-outline {
+  outline: 2px solid #1a1f2e !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px rgba(47, 111, 237, 0.25) !important;
+}

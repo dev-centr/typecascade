@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="currentColor" role="img" aria-label="TypeCascade">
+  <title>TypeCascade</title>
+  <!-- T spine + two strikethrough rules + solid winning declaration.
+       Subpaths share edges but never overlap, so evenodd unions cleanly. -->
+  <path fill-rule="evenodd" d="M12 18h56v17H12zM30 35h18v75H30zM48 49h68v5H48zM48 73h52v5H48zM56 93h44v17H56z"/>
+</svg>
