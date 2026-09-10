@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1122" height="585" viewBox="0 0 1122 585" role="img" aria-label="TypeCascade panel mock">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f8fb"/>
+      <stop offset="1" stop-color="#e8edf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1122" height="585" fill="url(#bg)"/>
+  <rect x="48" y="48" width="1026" height="489" rx="16" fill="#fff" stroke="#d8dee9"/>
+  <rect x="48" y="48" width="1026" height="42" rx="16" fill="#eceff4"/>
+  <rect x="48" y="74" width="1026" height="16" fill="#eceff4"/>
+  <circle cx="72" cy="69" r="6" fill="#ff5f57"/>
+  <circle cx="92" cy="69" r="6" fill="#febc2e"/>
+  <circle cx="112" cy="69" r="6" fill="#28c840"/>
+  <text x="140" y="74" font-family="Segoe UI, sans-serif" font-size="13" fill="#8b93a7">example.com  article</text>
+
+  <rect x="72" y="120" width="560" height="380" fill="#fffdf9"/>
+  <text x="96" y="160" font-family="Segoe UI, sans-serif" font-size="12" fill="#8b93a7" letter-spacing="2">DESIGN SYSTEMS</text>
+  <text x="96" y="210" font-family="Georgia, serif" font-size="42" fill="#1a1f2e">Cascade beats preference</text>
+  <text x="96" y="250" font-family="Segoe UI, sans-serif" font-size="16" fill="#333a4a">Body inherits. The heading class wins  until you inject.</text>
+
+  <rect x="660" y="120" width="390" height="380" fill="#fff" stroke="#d8dee9"/>
+  <text x="684" y="156" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#1a1f2e">TypeCascade</text>
+  <text x="684" y="176" font-family="Segoe UI, sans-serif" font-size="11" fill="#8b93a7">Typography cascade · edit · provider fonts</text>
+
+  <rect x="684" y="196" width="340" height="34" rx="8" fill="#2f6fed"/>
+  <text x="790" y="218" font-family="Segoe UI, sans-serif" font-size="13" fill="#fff">Pick element</text>
+
+  <rect x="684" y="246" width="340" height="70" rx="10" fill="#f4f6fa" stroke="#d8dee9"/>
+  <text x="700" y="270" font-family="ui-monospace, monospace" font-size="12" font-weight="700" fill="#1a1f2e">h2.hero-title.display</text>
+  <text x="700" y="294" font-family="ui-monospace, monospace" font-size="11" fill="#1a1f2e">.hero-title   .display</text>
+
+  <rect x="684" y="332" width="340" height="140" rx="10" fill="#f4f6fa" stroke="#d8dee9"/>
+  <text x="700" y="356" font-family="Segoe UI, sans-serif" font-size="11" fill="#8b93a7" letter-spacing="1">FONT-FAMILY</text>
+  <rect x="700" y="368" width="308" height="42" rx="6" fill="#eef4ff" stroke="#c9dafe"/>
+  <text x="712" y="386" font-family="Segoe UI, sans-serif" font-size="9" fill="#1e4bb8">WINNER</text>
+  <text x="712" y="402" font-family="ui-monospace, monospace" font-size="12" fill="#1a1f2e">"Fraunces", serif</text>
+  <text x="712" y="430" font-family="ui-monospace, monospace" font-size="12" fill="#8b93a7" text-decoration="line-through">Georgia, serif</text>
+  <text x="712" y="452" font-family="ui-monospace, monospace" font-size="12" fill="#8b93a7" text-decoration="line-through">system-ui, sans-serif</text>
+</svg>

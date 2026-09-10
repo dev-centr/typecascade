@@ -8,12 +8,16 @@
 !manifest.json
 !manifest.firefox.json
 !package.json
+!pnpm-lock.yaml
 !AGENTS.md
+!index.html
 !assets/
 !assets/**
 !src/
 !src/**
 !demos/
 !demos/**
+!scripts/
+!scripts/**
 !.github/
 !.github/**

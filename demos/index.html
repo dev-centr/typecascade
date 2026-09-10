@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TypeCascade demo · Dev-Centr</title>
+    <link rel="icon" href="../assets/icons/typecascade-glyph.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="demo.css" />
+  </head>
+  <body>
+    <header class="identity">
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="https://devcentr.org/">Dev-Centr</a></li>
+          <li><a href="./">Demos</a></li>
+          <li aria-current="page">TypeCascade</li>
+        </ol>
+      </nav>
+    </header>
+
+    <p class="vcs">
+      <a href="https://github.com/dev-centr/typecascade" rel="noreferrer">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="" width="18" height="18" />
+        GitHub
+      </a>
+    </p>
+
+    <main>
+      <h1>TypeCascade</h1>
+      <p class="lede">
+        When you are choosing type on a live site, the hard part is not picking a pretty face —
+        it is seeing which CSS rule actually won, what it overruled, and loading a provider font
+        onto that one element without editing the page by hand.
+      </p>
+
+      <figure class="anchor" aria-label="Panel preview">
+        <img
+          src="mock-panel.svg"
+          alt="TypeCascade side panel showing a selected heading, class chips, and a font-size cascade with overruled values struck through"
+          width="1122"
+          height="585"
+        />
+      </figure>
+
+      <section class="harness" aria-label="Demo controls">
+        <h2>Demo controls</h2>
+        <p>These knobs exist only for this explainer. They drive the facsimile below.</p>
+        <div class="harness-row">
+          <label>
+            Sample face
+            <select id="demo-family">
+              <option value="Fraunces">Fraunces</option>
+              <option value="IBM Plex Sans">IBM Plex Sans</option>
+              <option value="Space Grotesk">Space Grotesk</option>
+              <option value="JetBrains Mono">JetBrains Mono</option>
+            </select>
+          </label>
+          <label>
+            Provider
+            <select id="demo-provider">
+              <option value="google">Google Fonts</option>
+              <option value="bunny">Bunny Fonts</option>
+            </select>
+          </label>
+          <button type="button" id="demo-inject">Simulate inject</button>
+        </div>
+      </section>
+
+      <section class="stage">
+        <div class="facsimile-bezel">
+          <div class="window-chrome" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <em>example.com — article</em>
+          </div>
+          <div class="split">
+            <article class="page" id="sample-page">
+              <p class="eyebrow">Design systems</p>
+              <h2 id="sample-heading" class="hero-title display">
+                Cascade beats preference
+              </h2>
+              <p class="body">
+                Body copy inherits from <code>body</code>. The heading below has a more specific
+                class that should win — until you inject a provider font onto the selection.
+              </p>
+              <h3 id="sample-sub" class="section-title">Inherited size, local family</h3>
+              <p class="body small">
+                Click <strong>Pick</strong> in the real extension to inspect stacks like the panel on the right.
+              </p>
+            </article>
+            <aside class="panel-facsimile" aria-label="TypeCascade panel facsimile">
+              <header>
+                <img src="../assets/icons/typecascade-glyph.svg" alt="" width="22" height="22" />
+                <div>
+                  <strong>TypeCascade</strong>
+                  <small>Typography cascade · edit · provider fonts</small>
+                </div>
+              </header>
+              <button type="button" class="fake-primary" disabled>Pick element</button>
+              <div class="fake-card" id="fake-target">
+                <strong>h2.hero-title.display</strong>
+                <div class="chips">
+                  <span>.hero-title</span><span>.display</span>
+                </div>
+                <p class="meta">Font sources: <span id="fake-source">Google Fonts</span></p>
+              </div>
+              <div class="fake-card">
+                <h3>Cascade</h3>
+                <div class="prop">
+                  <div class="pname">font-family</div>
+                  <div class="layer win">
+                    <span class="badge">winner</span>
+                    <code id="fake-winner">"Fraunces", serif</code>
+                    <small>.display · styles.css</small>
+                  </div>
+                  <div class="layer lose">
+                    <span class="badge lose">overruled</span>
+                    <code class="strike">Georgia, serif</code>
+                    <small>h2 · styles.css · inherited from article</small>
+                  </div>
+                  <div class="layer lose">
+                    <span class="badge lose">overruled</span>
+                    <code class="strike">system-ui, sans-serif</code>
+                    <small>body · styles.css · inherited from body</small>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="demo.js"></script>
+  </body>
+</html>
