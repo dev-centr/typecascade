@@ -11,6 +11,8 @@
 !pnpm-lock.yaml
 !AGENTS.md
 !index.html
+!robots.txt
+!sitemap.xml
 !assets/
 !assets/**
 !src/
