@@ -23,3 +23,5 @@
 !scripts/**
 !.github/
 !.github/**
+!/.editorconfig
+!/.gitattributes
